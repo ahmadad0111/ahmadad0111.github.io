@@ -7,72 +7,48 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a class="logo" href="index.html">Adnan Ahmad</a>
-      <div class="nav-links">
-        <a href="index.html#projects">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="assets/Resume_Adnan.pdf">CV</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Adnan Ahmad</a>
+    <nav class="nav-links">
+      <a href="index.html#projects">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="assets/Adnan_Ahmad_CV.pdf">CV</a>
+      <a href="mailto:adnan.a@deakin.edu.au">Contact</a>
+    </nav>
+  </div>
+</header>
+  <main>
+    <section class="project-page">
+      <div class="container">
+        <p class="eyebrow">Federated Learning · Distributed ML · Second-Order Aggregation</p>
+        <h1>DecHW: Second-Order Decentralized Federated Learning</h1>
+        <p class="hero-text">A PyTorch-based decentralized training framework with Hessian-based aggregation for heterogeneous peer-to-peer federated learning.</p>
       </div>
-    </div>
-  </nav>
+    </section>
+    <section class="container content">
 
-  <header class="project-header">
-    <div class="container">
-      <span class="badge">Federated Learning · Distributed ML · Second-Order Aggregation</span>
-      <h1>DecHW: Second-Order Decentralized Federated Learning</h1>
-      <p class="lead">
-        A PyTorch-based decentralized training framework for peer-to-peer federated learning, with a Hessian-based
-        aggregation method to address data and model heterogeneity.
-      </p>
-    </div>
-  </header>
+      <h2>Overview</h2>
+      <p>DecHW addresses decentralized federated learning where clients collaborate over peer-to-peer networks without a central server. The method uses second-order information to weight model parameters during neighborhood aggregation.</p>
+      <h2>Key Contributions</h2>
+      <ul>
+        <li>Built a PyTorch-based decentralized FL training environment.</li>
+        <li>Implemented peer-to-peer model exchange over graph-based communication topologies.</li>
+        <li>Developed DecHW, a Hessian-based aggregation method for parameter-level weighting.</li>
+        <li>Validated against standard baselines including FedAvg-style aggregation.</li>
+      </ul>
+      <h2>Tech Stack</h2>
+      <p>Python, PyTorch, Federated Learning, Distributed Training, Graph Networks, Non-IID Data.</p>
+      <h2>Links</h2>
+      <p><a href="https://github.com/yourrepo" target="_blank" rel="noopener">GitHub Repository</a></p>
 
-  <main class="container content">
-    <h2>Overview</h2>
-    <p>
-      DecHW addresses decentralized federated learning where clients collaborate directly over peer-to-peer networks
-      without a central server. The system is designed for heterogeneous data distributions, heterogeneous model
-      states, and constrained communication.
-    </p>
-
-    <h2>Problem</h2>
-    <p>
-      In decentralized federated learning, clients may have different data distributions, different model initialization
-      states, and varying communication links. Standard averaging can lose important parameter-level information and
-      slow convergence under non-IID settings.
-    </p>
-
-    <h2>What I Built</h2>
-    <ul>
-      <li>Built a PyTorch-based decentralized FL training environment.</li>
-      <li>Implemented peer-to-peer model exchange over graph-based communication topologies.</li>
-      <li>Developed DecHW, a Hessian-based aggregation method for parameter-level weighting.</li>
-      <li>Used second-order information to capture local parameter importance.</li>
-      <li>Benchmarked against standard FL baselines including FedAvg-style aggregation.</li>
-    </ul>
-
-    <h2>Tech Stack</h2>
-    <p>
-      Python, PyTorch, Federated Learning, Distributed Training, Graph Networks, Non-IID Data, CNNs.
-    </p>
-
-    <h2>Impact</h2>
-    <p>
-      DecHW improves convergence speed and communication efficiency under heterogeneous, non-IID decentralized
-      settings by using parameter-level importance during neighborhood aggregation.
-    </p>
-
-    <h2>Links</h2>
-    <p>
-      <a href="https://github.com/yourrepo" target="_blank" rel="noopener">GitHub Repository</a>
-      <!-- Replace with your real GitHub/demo link -->
-    </p>
+    </section>
   </main>
-
   <footer class="footer">
-    <div class="container">© 2026 Adnan Ahmad</div>
+    <div class="container footer-inner">
+      <span>© 2026 Adnan Ahmad</span>
+      <span><a href="mailto:adnan.a@deakin.edu.au">adnan.a@deakin.edu.au</a></span>
+    </div>
   </footer>
 </body>
 </html>

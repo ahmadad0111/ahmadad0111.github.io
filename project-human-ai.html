@@ -7,73 +7,48 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a class="logo" href="index.html">Adnan Ahmad</a>
-      <div class="nav-links">
-        <a href="index.html#projects">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="assets/Adnan_Ahmad_CV.pdf">CV</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Adnan Ahmad</a>
+    <nav class="nav-links">
+      <a href="index.html#projects">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="assets/Adnan_Ahmad_CV.pdf">CV</a>
+      <a href="mailto:adnan.a@deakin.edu.au">Contact</a>
+    </nav>
+  </div>
+</header>
+  <main>
+    <section class="project-page">
+      <div class="container">
+        <p class="eyebrow">Human-AI Systems · Reinforcement Learning · Physiological Feedback</p>
+        <h1>Adaptive Human-AI Coordination via Physiological Feedback</h1>
+        <p class="hero-text">A real-time Overcooked-based system where physiological state prediction models infer human state and RL agents adapt skills accordingly.</p>
       </div>
-    </div>
-  </nav>
+    </section>
+    <section class="container content">
 
-  <header class="project-header">
-    <div class="container">
-      <span class="badge">Human-AI Systems · Reinforcement Learning · Physiological Feedback</span>
-      <h1>Adaptive Human-AI Coordination via Physiological Feedback</h1>
-      <p class="lead">
-        A real-time Overcooked-based human-AI coordination system where physiological state prediction models
-        infer human mental state and reinforcement learning agents adapt skills accordingly.
-      </p>
-    </div>
-  </header>
+      <h2>Overview</h2>
+      <p>This project connects physiological state prediction models with adaptive reinforcement learning agents. EEG, ECG, and eye-tracking streams are used to infer human mental state, which is then used by agents to adapt skill selection and provide interpretable action explanations.</p>
+      <h2>Key Contributions</h2>
+      <ul>
+        <li>Integrated Overcooked-AI with adaptive reinforcement learning agents.</li>
+        <li>Connected physiological state prediction models to the agent decision pipeline.</li>
+        <li>Enabled agents to adapt skill selection based on human state feedback.</li>
+        <li>Added interpretable explanations for agent actions.</li>
+      </ul>
+      <h2>Tech Stack</h2>
+      <p>Reinforcement Learning, PPO, PyTorch, EEG, ECG, Eye-tracking, LSL, Docker, FastAPI, GCP.</p>
+      <h2>Links</h2>
+      <p><a href="https://github.com/yourrepo" target="_blank" rel="noopener">GitHub Repository</a></p>
 
-  <main class="container content">
-    <h2>Overview</h2>
-    <p>
-      This project integrates reinforcement learning agents with physiological feedback from EEG, ECG, and eye-tracking
-      streams. The goal is to enable AI agents to adapt their behavior based on the human collaborator's inferred
-      cognitive or emotional state and provide interpretable action explanations.
-    </p>
-
-    <h2>Problem</h2>
-    <p>
-      Human-AI coordination in dynamic environments requires AI agents that can respond not only to the task state,
-      but also to the human collaborator's mental state. Standard RL agents often optimize task reward without
-      accounting for cognitive load, stress, or emotional changes.
-    </p>
-
-    <h2>What I Built</h2>
-    <ul>
-      <li>Integrated Overcooked-AI with adaptive reinforcement learning agents.</li>
-      <li>Connected physiological state prediction models to the agent decision pipeline.</li>
-      <li>Used EEG, ECG, and eye-tracking streams to infer human mental state in real time.</li>
-      <li>Enabled RL agents to adapt skill selection based on predicted human state.</li>
-      <li>Added interpretable action explanations to communicate why the agent selected a behavior.</li>
-      <li>Supported real-time operation using LSL, Docker, and FastAPI-based APIs.</li>
-    </ul>
-
-    <h2>Tech Stack</h2>
-    <p>
-      Reinforcement Learning, PPO, Overcooked-AI, PyTorch, EEG, ECG, Eye-tracking, LSL, Docker, FastAPI, GCP.
-    </p>
-
-    <h2>Impact</h2>
-    <p>
-      The system demonstrates how implicit physiological feedback can be used to improve adaptive human-AI
-      collaboration by connecting real-time human state prediction with RL-based skill adaptation and explainability.
-    </p>
-
-    <h2>Links</h2>
-    <p>
-      <a href="https://github.com/yourrepo" target="_blank" rel="noopener">GitHub Repository</a>
-      <!-- Replace with your real GitHub/demo link -->
-    </p>
+    </section>
   </main>
-
   <footer class="footer">
-    <div class="container">© 2026 Adnan Ahmad</div>
+    <div class="container footer-inner">
+      <span>© 2026 Adnan Ahmad</span>
+      <span><a href="mailto:adnan.a@deakin.edu.au">adnan.a@deakin.edu.au</a></span>
+    </div>
   </footer>
 </body>
 </html>
