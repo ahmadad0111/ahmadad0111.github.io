@@ -3,16 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adnan Ahmad | Applied Machine Learning Researcher</title>
-  <meta name="description" content="Adnan Ahmad — Applied Machine Learning Researcher specializing in reinforcement learning, federated learning, continual learning, and human-AI systems." />
+  <title>Adnan Ahmad | Applied AI Scientist</title>
+  <meta name="description" content="Adnan Ahmad — Applied AI Scientist specializing in reinforcement learning, federated learning, and human-AI systems." />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ===== HERO FIXES ===== */
+    .hero-center {
+      text-align: center;
+      padding-top: 60px;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.2);
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .hero-center h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #b6c2d2;
+      margin-bottom: 15px;
+    }
+
+    .hero-text {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+  </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">Adnan Ahmad</a>
       <nav class="nav-links">
-        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="publications.html">Publications</a>
@@ -22,174 +62,74 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-layout">
-        <div class="hero-copy">
-          <p class="eyebrow">Applied ML · Reinforcement Learning · Human-AI Systems</p>
-          <h1>Building adaptive machine learning systems for real-world human-AI collaboration.</h1>
-          <p class="hero-text">
-            I am an Applied Machine Learning Researcher working at the intersection of real-time ML systems,
-            reinforcement learning, federated learning, continual learning, and physiological signal processing.
-            My work focuses on AI agents that adapt to human state, distributed learning under heterogeneity,
-            and deployable ML systems.
-          </p>
+    <!-- HERO -->
+    <section class="hero hero-center">
+      <div class="container">
 
-          <div class="hero-actions">
-            <a class="button primary" href="#projects">View Projects</a>
-            <a class="button" href="assets/Adnan_Ahmad_CV.pdf">Download CV</a>
-            <a class="button" href="https://github.com/ahmadad0111" target="_blank" rel="noopener">GitHub</a>
-            <a class="button" href="https://www.linkedin.com/in/adnan-ahmad-47233b144/" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
-        </div>
+        <h1>Adnan Ahmad</h1>
+        <p class="subtitle">Applied AI Scientist</p>
 
-        <div class="hero-photo-card">
-          <img src="assets/adnan-photo.jpg" alt="Adnan Ahmad" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="photo-placeholder">
-            <span>Upload your photo as</span>
-            <strong>assets/adnan-photo.jpg</strong>
-          </div>
+        <!-- PHOTO -->
+        <img src="assets/adnan-photo.jpg" alt="Adnan Ahmad" class="profile-img">
 
-          <div class="quick-card">
-            <span class="status-dot"></span>
-            <p>Open to ML Engineer / Applied Scientist roles</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container about-grid">
-        <div>
-          <p class="section-kicker">About</p>
-          <h2>ML researcher with strong systems engineering experience.</h2>
-        </div>
-        <p class="section-text">
-          I design and deploy machine learning systems that operate under real-world constraints:
-          non-stationary data, heterogeneous users, real-time inference, and distributed training.
-          My recent work includes physiological state prediction from EEG/ECG, adaptive reinforcement
-          learning agents in Overcooked, and decentralized federated learning with second-order aggregation.
+        <p class="hero-text">
+          Building real-time AI systems combining reinforcement learning, physiological signal processing,
+          and distributed learning for adaptive human-AI collaboration.
         </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">View Projects</a>
+          <a class="button" href="assets/Adnan_Ahmad_CV.pdf">Download CV</a>
+          <a class="button" href="https://github.com/ahmadad0111" target="_blank">GitHub</a>
+          <a class="button" href="https://www.linkedin.com/in/adnan-ahmad-47233b144/" target="_blank">LinkedIn</a>
+        </div>
+
       </div>
     </section>
 
-    <section class="section compact">
-      <div class="container highlight-grid">
-        <div class="metric-card">
-          <span>01</span>
-          <h3>Real-time ML</h3>
-          <p>Streaming physiological signals with LSL, Docker, FastAPI, and GCP-backed inference.</p>
-        </div>
-        <div class="metric-card">
-          <span>02</span>
-          <h3>Adaptive RL</h3>
-          <p>Human-aware RL agents that adapt skill selection using cognitive/emotional state feedback.</p>
-        </div>
-        <div class="metric-card">
-          <span>03</span>
-          <h3>Distributed Learning</h3>
-          <p>Federated and continual learning methods for heterogeneous, non-IID, and streaming data.</p>
-        </div>
-      </div>
-    </section>
-
+    <!-- PROJECTS (UNCHANGED) -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Featured Work</p>
-          <h2>Projects</h2>
-        </div>
+        <h2>Projects</h2>
 
         <div class="project-grid">
           <article class="project-card featured">
-            <p class="project-type">Human-AI Systems · Reinforcement Learning</p>
-            <h3>Adaptive Human-AI Coordination via Physiological Feedback</h3>
+            <h3>Adaptive Human-AI Coordination</h3>
             <p>
-              Built a real-time Overcooked-based system where physiological state prediction models infer
-              human mental state from EEG/ECG/eye-tracking signals. RL agents use this feedback to adapt
-              skills and provide interpretable action explanations.
+              Real-time system where RL agents adapt to human cognitive state using EEG/ECG signals.
             </p>
-            <div class="tags">
-              <span>RL</span><span>PPO</span><span>EEG/ECG</span><span>LSL</span><span>FastAPI</span>
-            </div>
-            <a class="project-link" href="project-human-ai.html">Read case study →</a>
+            <a href="project-human-ai.html">Read more →</a>
           </article>
 
           <article class="project-card">
-            <p class="project-type">Federated Learning · Distributed ML</p>
-            <h3>DecHW: Second-Order Decentralized Federated Learning</h3>
+            <h3>DecHW: Decentralized Federated Learning</h3>
             <p>
-              Built a PyTorch-based decentralized training framework and developed DecHW, a Hessian-based
-              aggregation method for data/model heterogeneity under non-IID settings.
+              Second-order aggregation for non-IID decentralized learning.
             </p>
-            <div class="tags">
-              <span>PyTorch</span><span>Federated Learning</span><span>Non-IID</span><span>Hessian</span>
-            </div>
-            <a class="project-link" href="project-dechw.html">Read case study →</a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Robotics · Conversational AI</p>
-            <h3>Pepper Robot Conversational AI System</h3>
-            <p>
-              Integrated SoftBank Pepper with GPT-based APIs for real-time conversational interaction,
-              campus assistance, and AI demonstrations.
-            </p>
-            <div class="tags">
-              <span>LLMs</span><span>Robotics</span><span>APIs</span><span>Speech</span>
-            </div>
-            <a class="project-link" href="project-pepper.html">Read case study →</a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">FPGA · Computer Architecture</p>
-            <h3>FPGA MIPS Processor & Vision Accelerators</h3>
-            <p>
-              Designed a pipelined MIPS processor, low-area/high-performance vision accelerators, and a
-              Java-based assembler, validated on Xilinx Virtex-5.
-            </p>
-            <div class="tags">
-              <span>Verilog</span><span>FPGA</span><span>Java</span><span>Xilinx</span>
-            </div>
-            <a class="project-link" href="project-fpga.html">Read case study →</a>
+            <a href="project-dechw.html">Read more →</a>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section class="section" id="skills">
       <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">Technical Stack</p>
-          <h2>Skills</h2>
-        </div>
+        <h2>Skills</h2>
 
         <div class="skills-grid">
-          <div class="skill-card"><h3>Machine Learning</h3><p>Reinforcement Learning, PPO, Federated Learning, Continual Learning, Multimodal Learning</p></div>
-          <div class="skill-card"><h3>Programming</h3><p>Python, SQL, C++, Java, Verilog HDL</p></div>
-          <div class="skill-card"><h3>Frameworks</h3><p>PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, OpenCV</p></div>
-          <div class="skill-card"><h3>MLOps & Cloud</h3><p>Docker, FastAPI, Git, W&B, MLflow, LSL, GCP, Vertex AI, Dialogflow</p></div>
-          <div class="skill-card"><h3>Distributed Systems</h3><p>Decentralized Learning, Peer-to-Peer Training, Non-IID Learning</p></div>
-          <div class="skill-card"><h3>Hardware</h3><p>FPGA, Xilinx Virtex-5, Arduino, NVIDIA Jetson Nano</p></div>
+          <div class="skill-card"><h3>ML</h3><p>RL (PPO), Federated, Continual</p></div>
+          <div class="skill-card"><h3>Tools</h3><p>PyTorch, Docker, FastAPI, GCP</p></div>
+          <div class="skill-card"><h3>Systems</h3><p>LSL, Real-time ML, Distributed Training</p></div>
         </div>
       </div>
     </section>
 
-    <section class="section contact-section">
-      <div class="container contact-card">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2>Interested in ML systems, applied AI, or human-AI collaboration?</h2>
-          <p>I am open to ML Engineer, Applied Scientist, and AI Systems roles.</p>
-        </div>
-        <a class="button primary" href="mailto:adnan.a@deakin.edu.au">Email Me</a>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
       <span>© 2026 Adnan Ahmad</span>
-      <span><a href="mailto:adnan.a@deakin.edu.au">adnan.a@deakin.edu.au</a></span>
     </div>
   </footer>
 </body>
