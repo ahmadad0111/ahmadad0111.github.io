@@ -5,7 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications | Adnan Ahmad</title>
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .pub-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .pub-card {
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.18);
+    }
+
+    .pub-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .pub-meta {
+      color: var(--muted);
+      margin: 0 0 8px;
+    }
+
+    .pub-venue {
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .pub-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 <header class="site-header">
   <div class="container nav">
@@ -17,33 +63,122 @@
     </nav>
   </div>
 </header>
-  <main>
-    <section class="project-page">
-      <div class="container">
-        <p class="eyebrow">Research Publications</p>
-        <h1>Publications</h1>
-        <p class="hero-text">My publication record focuses on federated learning, continual learning, reinforcement learning, physiological signal processing, and human-AI collaboration.</p>
+
+<main>
+  <section class="project-page">
+    <div class="container">
+      <p class="eyebrow">Research Publications</p>
+      <h1>Publications</h1>
+      <p class="hero-text">
+        My research spans federated learning, decentralized learning, continual learning,
+        physiological signal modeling, explainable AI, and human-AI collaboration.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="https://scholar.google.com/citations?user=tRiri0AAAAAJ&hl=en&authuser=6" target="_blank" rel="noopener">Google Scholar</a>
       </div>
-    </section>
-    <section class="container content">
-
-      <h2>Full Publication List</h2>
-      <p>View the complete list on <a href="https://scholar.google.com/citations?user=tRiri0AAAAAJ&hl=en&authuser=6" target="_blank" rel="noopener">Google Scholar</a>.</p>
-      <h2>Research Areas</h2>
-      <ul>
-        <li>Federated learning under non-IID and heterogeneous data settings.</li>
-        <li>Online continual learning for physiological signal streams.</li>
-        <li>Self-supervised learning for EEG-based emotion recognition.</li>
-        <li>Reinforcement learning for adaptive human-AI coordination.</li>
-      </ul>
-
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© 2026 Adnan Ahmad</span>
-      <span><a href="mailto:adnan.a@deakin.edu.au">adnan.a@deakin.edu.au</a></span>
     </div>
-  </footer>
+  </section>
+
+  <section class="container content">
+
+    <h2>Research Areas</h2>
+    <div class="pub-grid">
+      <div class="pub-card">
+        <h3>Federated & Decentralized Learning</h3>
+        <p class="pub-meta">Robust aggregation, statistical heterogeneity, non-IID data, Hessian-based optimization, decentralized FL.</p>
+      </div>
+
+      <div class="pub-card">
+        <h3>Continual & Self-Supervised Learning</h3>
+        <p class="pub-meta">Online adaptation, prototype-based learning, cross-subject variability, EEG emotion recognition.</p>
+      </div>
+
+      <div class="pub-card">
+        <h3>Human-AI Collaboration</h3>
+        <p class="pub-meta">Adaptive agents, explainable AI, multimodal feedback, trust modeling, human-aware decision support.</p>
+      </div>
+
+      <div class="pub-card">
+        <h3>Physiological AI</h3>
+        <p class="pub-meta">EEG/ECG-based modeling, emotion recognition, cognitive state estimation, real-time physiological inference.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 42px;">Featured Publications</h2>
+
+    <div class="pub-list">
+
+      <div class="pub-card">
+        <h3>Robust Federated Learning under Statistical Heterogeneity via Hessian-Weighted Aggregation</h3>
+        <p class="pub-meta">A. Ahmad, W. Luo, A. Robles-Kelly</p>
+        <p class="pub-venue">Machine Learning, 112(2), 633–654, 2023</p>
+      </div>
+
+      <div class="pub-card">
+        <h3>Robust Federated Learning under Statistical Heterogeneity via Hessian Spectral Decomposition</h3>
+        <p class="pub-meta">A. Ahmad, W. Luo, A. Robles-Kelly</p>
+        <p class="pub-venue">Pattern Recognition, 141, 109635, 2023</p>
+      </div>
+
+      <div class="pub-card">
+        <h3>DecHW: Heterogeneous Decentralized Federated Learning Exploiting Second-Order Information</h3>
+        <p class="pub-meta">A. Ahmad, C. Boldrini, L. Valerio, A. Passarella, M. Conti</p>
+        <p class="pub-venue">arXiv preprint, 2026</p>
+      </div>
+
+      <div class="pub-card">
+        <h3>Robust Emotion Recognition via Bi-Level Self-Supervised Continual Learning</h3>
+        <p class="pub-meta">A. Ahmad, B. Nakisa, M. N. Rastgoo</p>
+        <p class="pub-venue">arXiv preprint, 2025</p>
+      </div>
+
+      <div class="pub-card">
+        <h3>Adaptive XAI in High Stakes Environments: Modeling Swift Trust with Multimodal Feedback in Human-AI Teams</h3>
+        <p class="pub-meta">N. Fernando, B. Nakisa, A. Ahmad, M. N. Rastgoo</p>
+        <p class="pub-venue">arXiv preprint, 2025</p>
+      </div>
+
+    </div>
+
+    <h2 style="margin-top: 42px;">Additional Publications</h2>
+
+    <div class="pub-list">
+
+      <div class="pub-card">
+        <h3>Bio-Inspired Dual-Network Model to Tackle Statistical Heterogeneity in Federated Learning</h3>
+        <p class="pub-meta">A. Ahmad et al.</p>
+        <p class="pub-venue">IJCNN, 2023</p>
+      </div>
+
+      <div class="pub-card">
+        <h3>Federated Learning under Statistical Heterogeneity on Riemannian Manifolds</h3>
+        <p class="pub-meta">A. Ahmad, W. Luo, A. Robles-Kelly</p>
+        <p class="pub-venue">PAKDD, 2023</p>
+      </div>
+
+      <div class="pub-card">
+        <h3>A Hessian-Based Federated Learning Approach to Tackle Statistical Heterogeneity</h3>
+        <p class="pub-meta">A. Ahmad, W. Luo, A. Robles-Kelly</p>
+        <p class="pub-venue">ADMA, 2023</p>
+      </div>
+
+      <div class="pub-card">
+        <h3>Report on the 3rd Workshop on NeuroPhysIIR 2025 at SIGIR CHIIR 2025</h3>
+        <p class="pub-meta">D. Spina et al.</p>
+        <p class="pub-venue">ACM SIGIR Forum, 2025</p>
+      </div>
+
+    </div>
+
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 Adnan Ahmad</span>
+    <span><a href="mailto:adnan.a@deakin.edu.au">adnan.a@deakin.edu.au</a></span>
+  </div>
+</footer>
 </body>
 </html>
