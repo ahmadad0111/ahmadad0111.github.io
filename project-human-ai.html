@@ -6,6 +6,7 @@
   <title>Adaptive Human-AI Coordination | Adnan Ahmad</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 <header class="site-header">
   <div class="container nav">
@@ -18,37 +19,68 @@
     </nav>
   </div>
 </header>
-  <main>
-    <section class="project-page">
-      <div class="container">
-        <p class="eyebrow">Human-AI Systems · Reinforcement Learning · Physiological Feedback</p>
-        <h1>Adaptive Human-AI Coordination via Physiological Feedback</h1>
-        <p class="hero-text">A real-time Overcooked-based system where physiological state prediction models infer human state and RL agents adapt skills accordingly.</p>
-      </div>
-    </section>
-    <section class="container content">
 
-      <h2>Overview</h2>
-      <p>This project connects physiological state prediction models with adaptive reinforcement learning agents. EEG, ECG, and eye-tracking streams are used to infer human mental state, which is then used by agents to adapt skill selection and provide interpretable action explanations.</p>
-      <h2>Key Contributions</h2>
-      <ul>
-        <li>Integrated Overcooked-AI with adaptive reinforcement learning agents.</li>
-        <li>Connected physiological state prediction models to the agent decision pipeline.</li>
-        <li>Enabled agents to adapt skill selection based on human state feedback.</li>
-        <li>Added interpretable explanations for agent actions.</li>
-      </ul>
-      <h2>Tech Stack</h2>
-      <p>Reinforcement Learning, PPO, PyTorch, EEG, ECG, Eye-tracking, LSL, Docker, FastAPI, GCP.</p>
-      <h2>Links</h2>
-      <p><a href="https://github.com/yourrepo" target="_blank" rel="noopener">GitHub Repository</a></p>
-
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© 2026 Adnan Ahmad</span>
-      <span><a href="mailto:adnan.a@deakin.edu.au">adnan.a@deakin.edu.au</a></span>
+<main>
+  <!-- HERO -->
+  <section class="project-page">
+    <div class="container">
+      <p class="eyebrow">Human-AI Systems · Reinforcement Learning · Real-Time ML</p>
+      <h1>Real-Time Human–AI Coordination via Physiological Feedback</h1>
+      <p class="hero-text">
+        An end-to-end system that integrates physiological state prediction with adaptive reinforcement learning agents, enabling human-aware decision-making in real time.
+      </p>
     </div>
-  </footer>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="container content">
+
+    <h2>Overview</h2>
+    <p>
+      This project develops an end-to-end human–AI coordination system in a multi-agent environment (Overcooked), where physiological signals (EEG, ECG, and eye-tracking) are used to infer human cognitive and emotional state in real time. These signals are streamed and processed through a low-latency pipeline and integrated into the decision loop of reinforcement learning agents.
+    </p>
+
+    <p>
+      The agents leverage this feedback to adapt skill selection dynamically, enabling more effective coordination with human partners while also providing interpretable explanations of their actions.
+    </p>
+
+    <h2>System Design</h2>
+    <ul>
+      <li>Real-time multimodal data streaming and synchronization using Lab Streaming Layer (LSL).</li>
+      <li>Physiological state prediction models for estimating cognitive and emotional state.</li>
+      <li>Reinforcement learning agents (PPO-based) operating in a multi-agent Overcooked environment.</li>
+      <li>Integration of human state into the agent policy for adaptive decision-making.</li>
+      <li>Containerized inference and API-based deployment using Docker and FastAPI.</li>
+    </ul>
+
+    <h2>Key Contributions</h2>
+    <ul>
+      <li>Designed an end-to-end pipeline connecting physiological sensing to RL-based decision-making.</li>
+      <li>Enabled human-aware adaptation through real-time cognitive and emotional state feedback.</li>
+      <li>Developed interpretable agent behavior via explanation of actions in context.</li>
+      <li>Demonstrated adaptive coordination in a multi-agent environment.</li>
+    </ul>
+
+    <h2>Tech Stack</h2>
+    <p>
+      Reinforcement Learning (PPO), PyTorch, EEG/ECG Processing, Eye-tracking, Real-time Data Streaming (LSL), Docker, FastAPI, Google Cloud Platform (GCP).
+    </p>
+
+    <h2>Links</h2>
+    <p>
+      <a href="https://github.com/ahmadad0111/overcooked_demo_torch/tree/main" target="_blank" rel="noopener">
+        GitHub Repository →
+      </a>
+    </p>
+
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 Adnan Ahmad</span>
+    <span><a href="mailto:adnan.a@deakin.edu.au">adnan.a@deakin.edu.au</a></span>
+  </div>
+</footer>
 </body>
 </html>
