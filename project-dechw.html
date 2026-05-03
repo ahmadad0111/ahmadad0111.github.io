@@ -6,6 +6,7 @@
   <title>DecHW | Adnan Ahmad</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 <header class="site-header">
   <div class="container nav">
@@ -18,37 +19,74 @@
     </nav>
   </div>
 </header>
-  <main>
-    <section class="project-page">
-      <div class="container">
-        <p class="eyebrow">Federated Learning · Distributed ML · Second-Order Aggregation</p>
-        <h1>DecHW: Second-Order Decentralized Federated Learning</h1>
-        <p class="hero-text">A PyTorch-based decentralized training framework with Hessian-based aggregation for heterogeneous peer-to-peer federated learning.</p>
-      </div>
-    </section>
-    <section class="container content">
 
-      <h2>Overview</h2>
-      <p>DecHW addresses decentralized federated learning where clients collaborate over peer-to-peer networks without a central server. The method uses second-order information to weight model parameters during neighborhood aggregation.</p>
-      <h2>Key Contributions</h2>
-      <ul>
-        <li>Built a PyTorch-based decentralized FL training environment.</li>
-        <li>Implemented peer-to-peer model exchange over graph-based communication topologies.</li>
-        <li>Developed DecHW, a Hessian-based aggregation method for parameter-level weighting.</li>
-        <li>Validated against standard baselines including FedAvg-style aggregation.</li>
-      </ul>
-      <h2>Tech Stack</h2>
-      <p>Python, PyTorch, Federated Learning, Distributed Training, Graph Networks, Non-IID Data.</p>
-      <h2>Links</h2>
-      <p><a href="https://github.com/yourrepo" target="_blank" rel="noopener">GitHub Repository</a></p>
-
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© 2026 Adnan Ahmad</span>
-      <span><a href="mailto:adnan.a@deakin.edu.au">adnan.a@deakin.edu.au</a></span>
+<main>
+  <!-- HERO -->
+  <section class="project-page">
+    <div class="container">
+      <p class="eyebrow">Federated Learning · Distributed Systems · Decentralized Training</p>
+      <h1>DecHW: Decentralized Federated Learning with Second-Order Optimization</h1>
+      <p class="hero-text">
+        A PyTorch-based framework for decentralized federated learning over dynamic peer-to-peer networks, enabling robust training under data and model heterogeneity.
+      </p>
     </div>
-  </footer>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="container content">
+
+    <h2>Overview</h2>
+    <p>
+      This project develops a decentralized federated learning framework where clients collaborate over peer-to-peer networks without a central server. Unlike standard federated learning setups, the system supports dynamic communication graphs and neighborhood-based model exchange.
+    </p>
+
+    <p>
+      On top of this framework, DecHW introduces a second-order aggregation strategy that leverages curvature information (Hessian-based) to better handle data and model heterogeneity under non-IID conditions, resulting in more stable and efficient distributed training.
+    </p>
+
+    <h2>System Design</h2>
+    <ul>
+      <li>Decentralized training architecture with peer-to-peer communication.</li>
+      <li>Support for dynamic graph topologies and neighborhood-based aggregation.</li>
+      <li>PyTorch-based simulation framework for large-scale distributed experiments.</li>
+      <li>Flexible client configuration for heterogeneous data and model settings.</li>
+    </ul>
+
+    <h2>Key Contributions</h2>
+    <ul>
+      <li>Designed a decentralized federated learning framework without central coordination.</li>
+      <li>Developed DecHW, a second-order aggregation method using curvature information.</li>
+      <li>Improved robustness to data and model heterogeneity in non-IID settings.</li>
+      <li>Demonstrated improved convergence stability compared to standard aggregation methods.</li>
+    </ul>
+
+    <h2>Evaluation</h2>
+    <ul>
+      <li>Benchmarked against standard federated learning methods (e.g., FedAvg-style aggregation).</li>
+      <li>Evaluated under non-IID data distributions and varying network topologies.</li>
+      <li>Analyzed convergence behavior and communication efficiency.</li>
+    </ul>
+
+    <h2>Tech Stack</h2>
+    <p>
+      Python, PyTorch, Federated Learning, Decentralized Training, Graph-based Communication, Non-IID Learning.
+    </p>
+
+    <h2>Links</h2>
+    <p>
+      <a href="https://github.com/ahmadad0111/DecHW" target="_blank" rel="noopener">
+        GitHub Repository →
+      </a>
+    </p>
+
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2026 Adnan Ahmad</span>
+    <span><a href="mailto:adnan.a@deakin.edu.au">adnan.a@deakin.edu.au</a></span>
+  </div>
+</footer>
 </body>
 </html>
