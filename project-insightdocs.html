@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InsightDocs | Adnan Ahmad</title>
+  <meta name="description" content="InsightDocs — production-grade agentic RAG system with hybrid retrieval, cross-encoder reranking, and a quantitative evaluation harness." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .diagram-wrap{margin:18px 0 8px;padding:14px;border:1px solid var(--border);
+      border-radius:18px;background:var(--card);box-shadow:var(--shadow)}
+    .diagram-wrap img{width:100%;display:block;border-radius:10px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+    .tags span{font-size:.82rem;color:#dceafe;background:rgba(255,255,255,0.08);
+      border:1px solid var(--border);padding:5px 11px;border-radius:999px}
+    .content h2{scroll-margin-top:90px}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Adnan Ahmad</a>
+    <nav class="nav-links">
+      <a href="index.html#projects">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="assets/Adnan_Ahmad_Resume.pdf">Resume</a>
+      <a href="assets/Adnan_Ahmad_CV.pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="project-page">
+      <div class="container">
+        <p class="eyebrow">Agentic RAG · LLMs · Hybrid Retrieval · MLOps</p>
+        <h1>InsightDocs: Production Agentic RAG</h1>
+        <p class="hero-text">An end-to-end, deployed question-answering system over your documents — hybrid retrieval, cross-encoder reranking, query routing and decomposition, and a quantitative evaluation harness, all served behind a streaming API and chat UI.</p>
+        <div class="tags">
+          <span>Python</span><span>FastAPI</span><span>Qdrant</span><span>LangChain</span>
+          <span>Sentence-Transformers</span><span>BM25</span><span>Cross-Encoder</span>
+          <span>Ollama / OpenAI / Anthropic</span><span>Docker</span><span>GitHub Actions</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container content">
+      <h2>Architecture</h2>
+      <div class="diagram-wrap">
+        <img src="assets/insightdocs-architecture.svg" alt="InsightDocs agentic RAG architecture diagram" />
+      </div>
+
+      <h2>What makes it more than a demo</h2>
+      <ul>
+        <li><strong>Hybrid retrieval</strong> — dense vector search combined with BM25 keyword search, fused with Reciprocal Rank Fusion.</li>
+        <li><strong>Cross-encoder reranking</strong> — a supervised reranker reorders candidates for substantially higher precision than cosine similarity alone.</li>
+        <li><strong>Agentic layer</strong> — a router answers greetings and meta questions directly (no wasted retrieval); a decomposer splits complex questions into sub-questions, retrieves each, and merges the context.</li>
+        <li><strong>Evaluation harness</strong> — context precision/recall, MRR, faithfulness, and answer-F1 metrics with an A/B guide for the retrieval upgrades.</li>
+        <li><strong>Document management</strong> — stable document IDs with upsert-based updates (re-uploading a file updates it in place), plus list, delete, and reset.</li>
+        <li><strong>Provider-switchable LLM</strong> — one environment variable swaps between local Ollama and OpenAI/Anthropic.</li>
+        <li><strong>Streaming web UI</strong> — chat with token streaming and inline source citations.</li>
+      </ul>
+
+      <h2>Engineering</h2>
+      <p>Built with a clean, modular architecture (ingestion, embeddings, retrieval, generation, agentic orchestration, and services), a branch-per-feature git workflow, unit tests for all pure logic, and GitHub Actions CI running the test suite on Python 3.10 and 3.11. Deployed with Docker Compose (Qdrant + API + optional Ollama) and a container healthcheck.</p>
+
+      <h2>Tech stack</h2>
+      <p>Python, FastAPI, Qdrant, Sentence-Transformers, BM25 (rank-bm25), cross-encoder rerankers, LangChain text splitters, PyMuPDF, Docker, GitHub Actions. LLM providers: Ollama, OpenAI, Anthropic.</p>
+
+      <h2>Links</h2>
+      <p><a href="https://github.com/ahmadad0111/insightdocs" target="_blank" rel="noopener">GitHub Repository</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Adnan Ahmad</span>
+      <span>
+        <a href="https://github.com/ahmadad0111" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/adnan-ahmad-47233b144/" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
