@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedVision | Adnan Ahmad</title>
+  <meta name="description" content="MedVision — a deployed, explainable (Grad-CAM) skin-lesion classifier with ONNX-optimized, latency-benchmarked inference. 0.91 macro-AUROC on DermaMNIST." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .diagram-wrap{margin:18px 0 8px;padding:14px;border:1px solid var(--border);
+      border-radius:18px;background:var(--card);box-shadow:var(--shadow)}
+    .diagram-wrap img{width:100%;display:block;border-radius:10px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+    .tags span{font-size:.82rem;color:#dceafe;background:rgba(255,255,255,0.08);
+      border:1px solid var(--border);padding:5px 11px;border-radius:999px}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 4px}
+    .metric{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+    .metric .n{font-size:1.7rem;font-weight:900;letter-spacing:-.02em}
+    .metric .l{color:var(--muted);font-size:.9rem;margin-top:2px}
+    table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+    th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border)}
+    th{color:var(--muted);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+    .disclaimer{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.35);
+      color:#f7d38a;border-radius:10px;padding:10px 14px;font-size:.85rem;margin:8px 0 4px}
+    @media (max-width:700px){.metrics{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Adnan Ahmad</a>
+    <nav class="nav-links">
+      <a href="index.html#projects">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="assets/Adnan_Ahmad_Resume.pdf">Resume</a>
+      <a href="assets/Adnan_Ahmad_CV.pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="project-page">
+      <div class="container">
+        <p class="eyebrow">Computer Vision · Medical Imaging · Explainable AI · MLOps</p>
+        <h1>MedVision: Explainable Skin-Lesion Classifier</h1>
+        <p class="hero-text">A deployed, explainable medical-image classifier: it predicts one of 7 skin-lesion types, shows <em>why</em> with Grad-CAM heatmaps, and serves predictions through an ONNX-optimized, latency-benchmarked FastAPI service.</p>
+        <div class="tags">
+          <span>PyTorch</span><span>timm / ConvNeXt</span><span>Grad-CAM</span>
+          <span>ONNX</span><span>INT8 Quantization</span><span>FastAPI</span>
+          <span>Docker</span><span>GitHub Actions</span>
+        </div>
+        <div class="disclaimer">Research/education demo only — not a medical device and not for diagnosis. Trained on the public DermaMNIST dataset.</div>
+      </div>
+    </section>
+
+    <section class="container content">
+      <h2>Live demo</h2>
+      <p>Upload a dermatoscopic image and the model returns a prediction, class probabilities, and a Grad-CAM heatmap localizing the pixels that drove the decision:</p>
+      <div class="diagram-wrap">
+        <img src="assets/medvision-demo.png" alt="MedVision web UI: skin lesion prediction with Grad-CAM heatmap overlay" />
+      </div>
+
+      <h2>Architecture</h2>
+      <div class="diagram-wrap">
+        <img src="assets/medvision-architecture.svg" alt="MedVision architecture: training, ONNX optimization, and explainable serving" />
+      </div>
+
+      <h2>Results</h2>
+      <p>ConvNeXt-Tiny fine-tuned on DermaMNIST (7 classes, 224px) — on par with published MedMNIST baselines.</p>
+      <div class="metrics">
+        <div class="metric"><div class="n">0.91</div><div class="l">Test macro-AUROC</div></div>
+        <div class="metric"><div class="n">0.75</div><div class="l">Test accuracy</div></div>
+        <div class="metric"><div class="n">7</div><div class="l">Lesion classes</div></div>
+      </div>
+
+      <h2>Inference optimization</h2>
+      <p>Exported the trained model to ONNX and INT8, and benchmarked latency and size on CPU:</p>
+      <table>
+        <tr><th>Engine</th><th>Latency</th><th>Size</th><th>vs PyTorch</th></tr>
+        <tr><td>PyTorch fp32</td><td>113.5 ms</td><td>106.2 MB</td><td>1.0×</td></tr>
+        <tr><td><strong>ONNX fp32</strong></td><td><strong>33.4 ms</strong></td><td>106.2 MB</td><td><strong>3.4× faster</strong></td></tr>
+        <tr><td>ONNX INT8</td><td>—</td><td><strong>26.9 MB</strong></td><td><strong>3.9× smaller</strong></td></tr>
+      </table>
+      <p>ONNX export alone cut CPU latency <strong>3.4×</strong> (113 → 33 ms); INT8 quantization shrank the model <strong>3.9×</strong> (106 → 27 MB).</p>
+
+      <h2>Explainability &amp; clinical error analysis</h2>
+      <p>Every prediction ships with a Grad-CAM heatmap highlighting the pixels that drove the decision. Reading the confusion matrix like a clinician, the model's hardest boundary is the clinically critical <strong>melanoma ↔ benign-nevus</strong> distinction — 57 of 223 melanomas were predicted as benign moles (the dangerous false-negative direction). This is the real challenge in dermatology, and the training pipeline exposes a class-weighting control to trade accuracy for higher melanoma recall when that clinical tradeoff is desired.</p>
+
+      <h2>Engineering</h2>
+      <p>Modular pipeline (data, model, training, explainability, export, serving), class-imbalance-aware training (tempered weighted loss, label smoothing, cosine schedule) tracking accuracy / macro-F1 / macro-AUROC with best-checkpoint selection, a branch-per-feature git workflow, unit-tested metrics and inference logic, GitHub Actions CI, and Docker Compose deployment with a container healthcheck.</p>
+
+      <h2>Tech stack</h2>
+      <p>Python, PyTorch, timm (ConvNeXt/ViT), MedMNIST, ONNX + ONNX Runtime, OpenCV, FastAPI, Docker, GitHub Actions, Weights &amp; Biases.</p>
+
+      <h2>Links</h2>
+      <p><a href="https://github.com/ahmadad0111/medvision" target="_blank" rel="noopener">GitHub Repository</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Adnan Ahmad</span>
+      <span>
+        <a href="https://github.com/ahmadad0111" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/adnan-ahmad-47233b144/" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
