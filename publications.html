@@ -4,7 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications | Adnan Ahmad</title>
+  <meta name="description" content="Peer-reviewed publications by Adnan Ahmad — federated learning, multimodal AI, continual learning, and human-AI collaboration." />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .pub-meta{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0 6px}
+    .pub-meta .chip{font-size:.82rem;color:#dceafe;background:rgba(255,255,255,0.08);
+      border:1px solid var(--border);padding:6px 12px;border-radius:999px}
+    ol.pubs{list-style:none;counter-reset:pub;padding:0;margin:8px 0}
+    ol.pubs li{counter-increment:pub;position:relative;padding:14px 0 14px 42px;
+      border-bottom:1px solid var(--border)}
+    ol.pubs li::before{content:"["counter(pub)"]";position:absolute;left:0;top:14px;
+      color:var(--accent);font-weight:800;font-size:.9rem}
+    ol.pubs .venue{color:var(--muted);font-style:italic}
+    ol.pubs .name{color:var(--text);font-weight:700}
+    .badge{display:inline-block;font-size:.7rem;font-weight:800;text-transform:uppercase;
+      letter-spacing:.05em;color:#f7d38a;background:rgba(245,158,11,.12);
+      border:1px solid rgba(245,158,11,.35);padding:2px 8px;border-radius:999px;margin-left:6px}
+    .reviewer{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+    .reviewer span{font-size:.85rem;color:var(--muted);background:var(--card);
+      border:1px solid var(--border);padding:6px 11px;border-radius:10px}
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -13,37 +32,75 @@
     <nav class="nav-links">
       <a href="index.html#projects">Projects</a>
       <a href="publications.html">Publications</a>
+      <a href="assets/Adnan_Ahmad_Resume.pdf">Resume</a>
       <a href="assets/Adnan_Ahmad_CV.pdf">CV</a>
-      <a href="mailto:adnan.a@deakin.edu.au">Contact</a>
     </nav>
   </div>
 </header>
+
   <main>
     <section class="project-page">
       <div class="container">
         <p class="eyebrow">Research Publications</p>
         <h1>Publications</h1>
-        <p class="hero-text">My publication record focuses on federated learning, continual learning, reinforcement learning, physiological signal processing, and human-AI collaboration.</p>
+        <p class="hero-text">Peer-reviewed research spanning federated and decentralized learning, multimodal AI, continual and self-supervised learning, and human-AI collaboration.</p>
+        <div class="pub-meta">
+          <span class="chip"><b>13+</b> peer-reviewed papers</span>
+          <span class="chip">Machine Learning · Pattern Recognition · Neurocomputing · ACM TIST</span>
+          <span class="chip"><a href="https://scholar.google.com/citations?hl=en&user=tRiri0AAAAAJ" target="_blank" rel="noopener" style="color:var(--accent)">Google Scholar ↗</a></span>
+        </div>
       </div>
     </section>
-    <section class="container content">
 
-      <h2>Full Publication List</h2>
-      <p>View the complete list on <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>.</p>
-      <h2>Research Areas</h2>
+    <section class="container content">
+      <h2>Journal Articles</h2>
+      <ol class="pubs">
+        <li><span class="name">A. Ahmad</span>, W. Luo, and A. Robles-Kelly. "Robust federated learning under statistical heterogeneity via Hessian-weighted aggregation." <span class="venue">Machine Learning</span>, vol. 112, 2023.</li>
+        <li><span class="name">A. Ahmad</span>, W. Luo, and A. Robles-Kelly. "Robust federated learning under statistical heterogeneity via Hessian spectral decomposition." <span class="venue">Pattern Recognition</span>, vol. 141, 2023.</li>
+        <li><span class="name">A. Ahmad</span>, B. Nakisa, and M. N. Rastgoo. "Robust emotion recognition via bi-level self-supervised continual learning." <span class="venue">Neurocomputing</span>, 2026.</li>
+        <li><span class="name">A. Ahmad</span>, B. Nakisa, and M. N. Rastgoo. "Adaptive prototype aggregation for continual learning on physiological data under cross-subject variability." <span class="venue">ACM Transactions on Intelligent Systems and Technology</span>, 2026.</li>
+        <li>S. R. Naqvi, <span class="name">A. Ahmad</span>, S. M. R. Islam, et al. "Towards prevention of sportsmen burnout: formal analysis of sub-optimal tournament scheduling." <span class="venue">Computers, Materials &amp; Continua</span>, vol. 70, 2022.</li>
+        <li><span class="name">A. Ahmad</span>, C. Boldrini, L. Valerio, A. Passarella, and M. Conti. "DecHW: Heterogeneous decentralized federated learning exploiting second-order information." <span class="venue">IEEE Transactions on Emerging Topics in Computational Intelligence</span>.<span class="badge">Under review</span></li>
+        <li><span class="name">A. Ahmad</span>, B. Nakisa, and M. N. Rastgoo. "Partner-aware hierarchical skill discovery for robust human-AI collaboration." <span class="venue">Expert Systems with Applications</span>.<span class="badge">Under review</span></li>
+        <li><span class="name">A. Ahmad</span>, B. Nakisa, and M. N. Rastgoo. "Adaptive human-AI coordination via hierarchical action disentanglement." <span class="venue">Transactions on Machine Learning Research</span>.<span class="badge">Under review</span></li>
+      </ol>
+
+      <h2>Conference Proceedings</h2>
+      <ol class="pubs">
+        <li><span class="name">A. Ahmad</span> et al. "Bio-inspired dual-network model to tackle statistical heterogeneity in federated learning." 2023.</li>
+        <li><span class="name">A. Ahmad</span>, W. Luo, and A. Robles-Kelly. "Federated learning under statistical heterogeneity on Riemannian manifolds." <span class="venue">Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD)</span>, 2023.</li>
+        <li><span class="name">A. Ahmad</span>, W. Luo, and A. Robles-Kelly. "A Hessian-based federated learning approach to tackle statistical heterogeneity." <span class="venue">Advanced Data Mining and Applications</span>, Springer, 2023.</li>
+        <li>N. Fernando, B. Nakisa, <span class="name">A. Ahmad</span>, and M. N. Rastgoo. "Adaptive XAI in high-stakes environments: modeling swift trust with multimodal feedback in human-AI teams." 2025.</li>
+        <li>D. Spina et al. "Report on the 3rd workshop on neurophysiological approaches for interactive information retrieval (NeurophysIIR 2025) at ACM SIGIR CHIIR 2025." 2025.</li>
+      </ol>
+
+      <h2>Reviewer Activities</h2>
+      <div class="reviewer">
+        <span>NeurIPS 2026</span><span>ICLR 2025</span><span>Elsevier Pattern Recognition</span>
+        <span>Elsevier Pervasive &amp; Mobile Computing</span><span>PAKDD</span>
+        <span>IEEE IJCNN</span><span>WACV Workshop (CVDL / SARFish)</span>
+      </div>
+
+      <h2>Awards &amp; Recognition</h2>
       <ul>
-        <li>Federated learning under non-IID and heterogeneous data settings.</li>
-        <li>Online continual learning for physiological signal streams.</li>
-        <li>Self-supervised learning for EEG-based emotion recognition.</li>
-        <li>Reinforcement learning for adaptive human-AI coordination.</li>
+        <li>ERCIM "Alain Bensoussan" Fellowship Programme — Offered 2024</li>
+        <li>Postgraduate Research Scholarship, Deakin University — 2020–2024</li>
+        <li>Chartered Professional Engineer (CPEng), Engineers Australia</li>
+        <li>Deakin Cyber Research Grant — AUD 12,000</li>
       </ul>
 
+      <p style="margin-top:22px">Full, up-to-date list on <a href="https://scholar.google.com/citations?hl=en&user=tRiri0AAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
     </section>
   </main>
+
   <footer class="footer">
     <div class="container footer-inner">
       <span>© 2026 Adnan Ahmad</span>
-      <span><a href="mailto:adnan.a@deakin.edu.au">adnan.a@deakin.edu.au</a></span>
+      <span>
+        <a href="https://scholar.google.com/citations?hl=en&user=tRiri0AAAAAJ" target="_blank" rel="noopener">Scholar</a> ·
+        <a href="https://github.com/ahmadad0111" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/adnan-ahmad-47233b144/" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
     </div>
   </footer>
 </body>
