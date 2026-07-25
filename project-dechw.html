@@ -15,6 +15,15 @@
     .tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
     .tags span{font-size:.82rem;color:#dceafe;background:rgba(255,255,255,0.08);
       border:1px solid var(--border);padding:5px 11px;border-radius:999px}
+    .highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 4px}
+    .highlights .h{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+    .highlights .h .n{font-size:1.15rem;font-weight:900;letter-spacing:-.01em;color:var(--text)}
+    .highlights .h .l{color:var(--muted);font-size:.86rem;margin-top:3px}
+    .stack{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+    .stack span{font-size:.84rem;color:var(--muted);background:var(--card);
+      border:1px solid var(--border);padding:6px 11px;border-radius:10px}
+    .content h2{scroll-margin-top:90px}
+    @media(max-width:700px){.highlights{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -39,21 +48,21 @@
       </div>
     </section>
     <section class="container content">
+      <div class="highlights"><div class="h"><div class="n">Peer-to-peer</div><div class="l">No central server</div></div><div class="h"><div class="n">Second-order</div><div class="l">Hessian-weighted aggregation</div></div><div class="h"><div class="n">&gt; FedAvg</div><div class="l">Faster, less communication</div></div></div>
 
       <h2>Overview</h2>
-      <p>DecHW addresses decentralized federated learning where clients collaborate over peer-to-peer networks without a central server. The method uses second-order information to weight model parameters during neighborhood aggregation.</p>
-      <h2>Key Contributions</h2>
-      <ul>
-        <li>Built a PyTorch-based decentralized FL training environment.</li>
-        <li>Implemented peer-to-peer model exchange over graph-based communication topologies.</li>
-        <li>Developed DecHW, a Hessian-based aggregation method for parameter-level weighting.</li>
-        <li>Validated against standard baselines including FedAvg-style aggregation.</li>
-      </ul>
-      <h2>Tech Stack</h2>
-      <p>Python, PyTorch, Federated Learning, Distributed Training, Graph Networks, Non-IID Data.</p>
+      <p>DecHW tackles decentralized federated learning, where clients collaborate directly over peer-to-peer networks with no central parameter server. Under statistically heterogeneous (non-IID) data, naïve averaging converges slowly; DecHW uses second-order (Hessian) information to weight each neighbour's parameters by importance during aggregation, improving convergence and cutting communication rounds.</p>
+
+      <h2>What I built</h2>
+      <ul><li>Built a PyTorch decentralized-FL training framework for peer-to-peer model exchange over graph-based communication topologies.</li><li>Developed DecHW, a Hessian-based aggregation method that weights parameters by second-order importance.</li><li>Evaluated on benchmark computer-vision datasets across heterogeneous network topologies and non-IID splits.</li><li>Benchmarked against FedAvg-style baselines, showing faster convergence and reduced communication overhead.</li></ul>
+
+      <h2>Tech stack</h2>
+      <div class="stack"><span>Python</span><span>PyTorch</span><span>Federated Learning</span><span>Decentralized / P2P</span><span>Second-Order Optimization</span><span>Non-IID Data</span></div>
+      <h2>Related publication</h2>
+      <p>Ahmad et al., "DecHW: Heterogeneous decentralized federated learning exploiting second-order information," IEEE Transactions on Emerging Topics in Computational Intelligence (under review). See <a href="publications.html">Publications</a>.</p>
+
       <h2>Links</h2>
       <p><a href="https://github.com/ahmadad0111/DecHW" target="_blank" rel="noopener">GitHub Repository</a></p>
-
     </section>
   </main>
   <footer class="footer">

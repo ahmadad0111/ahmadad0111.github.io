@@ -15,6 +15,15 @@
     .tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
     .tags span{font-size:.82rem;color:#dceafe;background:rgba(255,255,255,0.08);
       border:1px solid var(--border);padding:5px 11px;border-radius:999px}
+    .highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 4px}
+    .highlights .h{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+    .highlights .h .n{font-size:1.15rem;font-weight:900;letter-spacing:-.01em;color:var(--text)}
+    .highlights .h .l{color:var(--muted);font-size:.86rem;margin-top:3px}
+    .stack{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+    .stack span{font-size:.84rem;color:var(--muted);background:var(--card);
+      border:1px solid var(--border);padding:6px 11px;border-radius:10px}
+    .content h2{scroll-margin-top:90px}
+    @media(max-width:700px){.highlights{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -39,20 +48,19 @@
       </div>
     </section>
     <section class="container content">
+      <div class="highlights"><div class="h"><div class="n">Real-time</div><div class="l">Low-latency speech loop</div></div><div class="h"><div class="n">SoftBank Pepper</div><div class="l">Humanoid robot</div></div><div class="h"><div class="n">GPT via API</div><div class="l">Cloud inference</div></div></div>
 
       <h2>Overview</h2>
-      <p>This project connects a humanoid robot with cloud-based language model inference to support natural conversational interaction in public-facing demonstrations.</p>
-      <h2>Key Contributions</h2>
-      <ul>
-        <li>Integrated SoftBank Pepper robot with GPT-based conversational APIs.</li>
-        <li>Designed an API-driven architecture connecting speech input, cloud inference, and robotic responses.</li>
-        <li>Developed middleware for low-latency communication between robot hardware and AI services.</li>
-      </ul>
-      <h2>Tech Stack</h2>
-      <p>Python, GPT APIs, Robotics Middleware, Speech Interaction, API Integration.</p>
+      <p>A real-time conversational system that gives a SoftBank Pepper humanoid robot natural spoken interaction by connecting it to GPT-based language models through an API-driven architecture. Built for public-facing campus demonstrations, it pipes speech input to cloud inference and back to the robot with low latency.</p>
+
+      <h2>What I built</h2>
+      <ul><li>Integrated the SoftBank Pepper robot with GPT-based conversational APIs.</li><li>Designed an API-driven architecture linking speech input, cloud inference, and robotic responses.</li><li>Built middleware for low-latency communication between the robot hardware and AI services.</li><li>Deployed for live, interactive public demonstrations.</li></ul>
+
+      <h2>Tech stack</h2>
+      <div class="stack"><span>Python</span><span>GPT / LLM APIs</span><span>Speech Interaction</span><span>Robotics Middleware</span><span>API Integration</span></div>
+
       <h2>Links</h2>
       <p><a href="https://github.com/ahmadad0111/pepper_bot" target="_blank" rel="noopener">GitHub Repository</a></p>
-
     </section>
   </main>
   <footer class="footer">

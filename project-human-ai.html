@@ -15,6 +15,15 @@
     .tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
     .tags span{font-size:.82rem;color:#dceafe;background:rgba(255,255,255,0.08);
       border:1px solid var(--border);padding:5px 11px;border-radius:999px}
+    .highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 4px}
+    .highlights .h{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+    .highlights .h .n{font-size:1.15rem;font-weight:900;letter-spacing:-.01em;color:var(--text)}
+    .highlights .h .l{color:var(--muted);font-size:.86rem;margin-top:3px}
+    .stack{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+    .stack span{font-size:.84rem;color:var(--muted);background:var(--card);
+      border:1px solid var(--border);padding:6px 11px;border-radius:10px}
+    .content h2{scroll-margin-top:90px}
+    @media(max-width:700px){.highlights{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -39,21 +48,21 @@
       </div>
     </section>
     <section class="container content">
+      <div class="highlights"><div class="h"><div class="n">Real-time</div><div class="l">EEG/ECG state inference</div></div><div class="h"><div class="n">RL agents adapt</div><div class="l">To human mental state</div></div><div class="h"><div class="n">Interpretable</div><div class="l">Explained agent actions</div></div></div>
 
       <h2>Overview</h2>
-      <p>This project connects physiological state prediction models with adaptive reinforcement learning agents. EEG, ECG, and eye-tracking streams are used to infer human mental state, which is then used by agents to adapt skill selection and provide interpretable action explanations.</p>
-      <h2>Key Contributions</h2>
-      <ul>
-        <li>Integrated Overcooked-AI with adaptive reinforcement learning agents.</li>
-        <li>Connected physiological state prediction models to the agent decision pipeline.</li>
-        <li>Enabled agents to adapt skill selection based on human state feedback.</li>
-        <li>Added interpretable explanations for agent actions.</li>
-      </ul>
-      <h2>Tech Stack</h2>
-      <p>Reinforcement Learning, PPO, PyTorch, EEG, ECG, Eye-tracking, LSL, Docker, FastAPI, GCP.</p>
+      <p>A real-time system in the Overcooked environment where deep models infer a human collaborator's mental state from multimodal physiological signals (EEG, ECG, eye-tracking), and reinforcement-learning agents adapt their skills in response. Streaming infrastructure and containerized services keep the human-in-the-loop pipeline low-latency, and agent actions come with interpretable explanations.</p>
+
+      <h2>What I built</h2>
+      <ul><li>Integrated Overcooked-AI with adaptive reinforcement-learning agents (hierarchical skill learning).</li><li>Connected physiological state-prediction models (EEG/ECG/eye-tracking) to the agent decision pipeline.</li><li>Enabled agents to adapt skill selection based on inferred human state, in simulation and human-in-the-loop deployments.</li><li>Built streaming (LSL) + containerized (Docker) services with FastAPI APIs for real-time operation.</li><li>Added interpretable explanations for agent actions.</li></ul>
+
+      <h2>Tech stack</h2>
+      <div class="stack"><span>PyTorch</span><span>Reinforcement Learning</span><span>Multimodal (EEG/ECG)</span><span>LSL Streaming</span><span>Docker</span><span>FastAPI</span><span>GCP</span></div>
+      <h2>Related publication</h2>
+      <p>Related work: "Partner-aware hierarchical skill discovery for robust human-AI collaboration" (Expert Systems with Applications) and "Adaptive human-AI coordination via hierarchical action disentanglement" (TMLR), both under review. See <a href="publications.html">Publications</a>.</p>
+
       <h2>Links</h2>
       <p><a href="https://github.com/ahmadad0111/overcooked_demo_torch" target="_blank" rel="noopener">GitHub Repository</a></p>
-
     </section>
   </main>
   <footer class="footer">
